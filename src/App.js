@@ -1,22 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Greeting from './components/pure/greeting';
+import GreetingFunction from './components/pure/greetingFunction';
+import ComponenteA from './components/1_Componentes/ComponenteA';
+import ComponenteB from './components/1_Componentes/ComponenteB';
+import { useState } from 'react'
 
 function App() {
+
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <Greeting name='Martin'  lastName ='Gutierrez'/> */}
+        {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
+        <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' />
+        {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
+
       </header>
     </div>
   );
