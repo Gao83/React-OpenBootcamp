@@ -3,6 +3,7 @@ import Greeting from './components/pure/greeting';
 import GreetingFunction from './components/pure/greetingFunction';
 import { useState } from 'react'
 import TaskListComponent from './components/container/task_list';
+import GreetingStyled from './components/pure/greetingStyled';
 
 function App() {
 
@@ -10,13 +11,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
         {/* <Greeting name='Martin'  lastName ='Gutierrez'/> */}
         {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
         {/* <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
         {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
         <TaskListComponent />
-      </header>
+        {/* <GreetingStyled name='Martin' /> */}
     </div>
   );
 }
