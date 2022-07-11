@@ -4,6 +4,7 @@ import GreetingFunction from './components/pure/greetingFunction';
 import { useState } from 'react'
 import TaskListComponent from './components/container/task_list';
 import GreetingStyled from './components/pure/greetingStyled';
+import Father from './components/container/Father.jsx'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
         <TaskListComponent />
         {/* <GreetingStyled name='Martin' /> */}
+        {/* <Father /> */}
     </div>
   );
 }

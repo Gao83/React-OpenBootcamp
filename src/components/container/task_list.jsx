@@ -28,8 +28,27 @@ function TaskListComponent() {
     }, [tasks]);
 
 
-    const changeState = (id) => {
-        console.log('to do: cambiar estado de una tarea')
+    function completeTask(task) {
+        const index = tasks.indexOf(task)
+        const tempTask = [...tasks]
+        tempTask[index].completed = !tempTask[index].completed
+        setTasks(tempTask)
+
+    }
+
+    function deleteTask(task) {
+        const index = tasks.indexOf(task)
+        const tempTask = [...tasks]
+        tempTask.splice(index, 1)
+        setTasks(tempTask)
+
+    }
+
+    function addTask(task) {
+        const index = tasks.indexOf(task)
+        const tempTask = [...tasks]
+        tempTask.push(task)
+        setTasks(tempTask)
     }
 
     return (
@@ -54,16 +73,22 @@ function TaskListComponent() {
                                     return (
                                         <TaskComponent
                                             key={index}
-                                            task={task}>
+                                            task={task}
+                                            complete={completeTask}
+                                            remove={deleteTask}
+                                        >
                                         </TaskComponent>
                                     )
                                 })}
                             </tbody>
                         </table>
                     </div>
-                    <TaskForm></TaskForm>
                 </div>
             </div>
+            <TaskForm
+                add={addTask}>
+
+            </TaskForm>
             {/* Aplicar un for o map para renderizar la lista */}
 
         </div>
