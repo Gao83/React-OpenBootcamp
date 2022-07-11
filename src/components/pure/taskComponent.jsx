@@ -38,17 +38,11 @@ const TaskComponent = ({ task }) => {
         }
     }
 
-    const taskIconCompleted = () =>{
-    //  if(task.completed){
-    //      return (<i className='bi-toggle-on' style={{ color: 'green', fontWeight: 'bold' }}></i>)
-    //  }else{
-    //      return (<i className='bi-toggle-off' style={{ color: 'grey', fontWeight: 'bold' }}></i>)
-    //  }
+    const taskCompletedIcon = () => {
 
-    return task.completed ?
-    (<i className='bi-toggle-on' style={{ color: 'green', fontWeight: 'bold' }}></i>) :
-    (<i className='bi-toggle-off' style={{ color: 'grey', fontWeight: 'bold' }}></i>)
-    
+        return task.completed ?
+            (<i className='bi-toggle-on' style={{ color: 'green', fontWeight: 'bold' }}></i>) :
+            (<i className='bi-toggle-off' style={{ color: 'grey', fontWeight: 'bold' }}></i>)
     }
 
     return (
@@ -62,10 +56,7 @@ const TaskComponent = ({ task }) => {
             <td>
                 <span className='align-middle'>{taskLevelBadge()}</span>
             </td>
-            <td className='align-middle'> {taskIconCompleted()}
-                {/* {task.completed ?
-                    (<i className='bi-toggle-on' style={{ color: 'green', fontWeight: 'bold' }}></i>) :
-                    (<i className='bi-toggle-off' style={{ color: 'grey', fontWeight: 'bold' }}></i>)} */}
+            <td className='align-middle'> {taskCompletedIcon()}
                 <i className='bi-trash' style={{ color: 'tomato' }}></i>
             </td>
         </tr>
