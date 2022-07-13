@@ -19,6 +19,7 @@ function TaskForm({ add }) {
         )
 
         add(newTask)
+        e.target.reset()
     }
 
 

@@ -87,9 +87,7 @@ function TaskListComponent() {
             </div>
             <TaskForm
                 add={addTask}>
-
             </TaskForm>
-            {/* Aplicar un for o map para renderizar la lista */}
 
         </div>
     )
