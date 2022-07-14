@@ -17,10 +17,10 @@ function App() {
         {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
         {/* <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
         {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
-        {/* <TaskListComponent /> */}
+        <TaskListComponent />
         {/* <GreetingStyled name='Martin' /> */}
         {/* <Father /> */}
-        <OptionalRender />
+        {/* <OptionalRender /> */}
     </div>
   );
 }

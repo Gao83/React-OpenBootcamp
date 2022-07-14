@@ -45,8 +45,17 @@ const TaskComponent = ({ task, complete, remove }) => {
             (<i onClick={() => complete(task)} className='bi-toggle-off task-action' style={{ color: 'grey', fontWeight: 'bold' }}></i>)
     }
 
+    const taskCompleted = {
+        color: 'grey',
+        textDecoration: 'line-through'
+    }
+
+    const taskPending = {
+        color: 'tomato',
+        fontWeight: 'bold'
+    }
     return (
-        <tr className='fw-normal'>
+        <tr className='fw-normal' style={task.completed ? taskCompleted : taskPending}>
             <th>
                 <span className='ms-2'>{task.name}</span>
             </th>
@@ -57,19 +66,17 @@ const TaskComponent = ({ task, complete, remove }) => {
                 <span className='align-middle'>{taskLevelBadge()}</span>
             </td>
             <td className='align-middle'> {taskCompletedIcon()}
-                <i onClick={() => remove (task)} className='bi-trash task-action' style={{ color: 'tomato' }}></i>
+                <i onClick={() => remove(task)} className='bi-trash task-action' style={{ color: 'tomato' }}></i>
             </td>
         </tr>
-    );
-};
-
+    )
+}
 
 TaskComponent.propTypes = {
     task: PropTypes.instanceOf(Task).isRequired,
     complete: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired
-};
-
+}
 
 export default TaskComponent;
 
