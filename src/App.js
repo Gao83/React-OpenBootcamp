@@ -5,6 +5,7 @@ import { useState } from 'react'
 import TaskListComponent from './components/container/task_list';
 import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/Father.jsx'
+import OptionalRender from './components/pure/OptionalRender';
 
 function App() {
 
@@ -16,9 +17,10 @@ function App() {
         {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
         {/* <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
         {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
-        <TaskListComponent />
+        {/* <TaskListComponent /> */}
         {/* <GreetingStyled name='Martin' /> */}
         {/* <Father /> */}
+        <OptionalRender />
     </div>
   );
 }
