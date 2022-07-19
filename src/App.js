@@ -7,6 +7,7 @@ import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/Father.jsx'
 import OptionalRender from './components/pure/OptionalRender';
 import LoginFormik from './components/pure/forms/LoginFormik';
+import RegisterFormik from './components/pure/forms/RegisterFormik';
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
         {/* <GreetingStyled name='Martin' /> */}
         {/* <Father /> */}
         {/* <OptionalRender /> */}
-        <LoginFormik />
+        {/* <LoginFormik /> */}
+        <RegisterFormik />
     </div>
   );
 }
