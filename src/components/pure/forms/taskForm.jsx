@@ -9,7 +9,7 @@ function TaskForm({ add, length }) {
     const levelRef = useRef(LEVELS.NORMAL)
 
     function addTask(e) {
-        e.preventDefault()
+        e.preventDefault() // para evitar la recarga de la pagina
         const newTask = new Task(
             nameRef.current.value,
             descriptionRef.current.value,

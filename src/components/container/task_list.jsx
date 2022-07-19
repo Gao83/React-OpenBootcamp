@@ -8,22 +8,23 @@ import TaskForm from '../pure/forms/taskForm'
 
 function TaskListComponent() {
 
-    // const defaultTask1 = new Task('Example 1', 'Default description 1', true, LEVELS.NORMAL)
-    // const defaultTask2 = new Task('Example 2', 'Default description 2', false, LEVELS.URGENT)
-    // const defaultTask3 = new Task('Example 3', 'Default description 3', false, LEVELS.BLOCKING)
+    const defaultTask1 = new Task('Example 1', 'Default description 1', true, LEVELS.NORMAL)
+    const defaultTask2 = new Task('Example 2', 'Default description 2', false, LEVELS.URGENT)
+    const defaultTask3 = new Task('Example 3', 'Default description 3', false, LEVELS.BLOCKING)
 
 
 
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
         console.log('task state has been modified')
-        setLoading(false)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
         return () => {
             console.log('task list component is going to unmount')
-
         };
     }, [tasks]);
 
@@ -90,6 +91,7 @@ function TaskListComponent() {
             </div>
     }
 
+ 
 
     return (
         <div>
@@ -99,7 +101,7 @@ function TaskListComponent() {
                         <h5> Your tasks:</h5>
                     </div>
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={{ position: 'relative', height: '400px' }}>
-                        {taskTable}
+                        {loading ? (<div className='loader'></div>) : taskTable}
                     </div>
                 </div>
             </div>
