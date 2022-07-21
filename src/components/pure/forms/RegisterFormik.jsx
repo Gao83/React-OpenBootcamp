@@ -1,6 +1,6 @@
 import React from 'react'
 import { User } from '../../../models/user.class'
-import { Formik, Form, Field, ErrorMessage, } from 'formik'
+import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik'
 import * as Yup from 'yup'
 import { ROLES } from '../../../models/roles.enum'
 
@@ -62,7 +62,7 @@ function RegisterFormik() {
                     <Form>
                         <label htmlFor="username">Username</label>
                         <Field id="username" type="text" name="username" placeholder="Your username" />
-                        {errors.password && touched.password && (<ErrorMessage name="password" component='div' />)}
+                        {errors.username && touched.username && (<ErrorMessage name="username" component='div' />)}
 
                         <label htmlFor="email">Email</label>
                         <Field id="email" type="email" name="email" placeholder="example@email.com" />
@@ -78,6 +78,8 @@ function RegisterFormik() {
 
                         <button type="submit">Register account</button>
                         {isSubmitting ? (<p>Sending your credentials...</p>) : null}
+
+                        
                     </Form>
                 )}
 
