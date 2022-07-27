@@ -24,7 +24,7 @@ function App() {
         {/* <Father /> */}
         {/* <OptionalRender /> */}
         {/* <LoginFormik /> */}
-        <RegisterFormik />
+        {/* <RegisterFormik /> */}
     </div>
   );
 }
