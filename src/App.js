@@ -8,6 +8,8 @@ import Father from './components/container/Father.jsx'
 import OptionalRender from './components/pure/OptionalRender';
 import LoginFormik from './components/pure/forms/LoginFormik';
 import RegisterFormik from './components/pure/forms/RegisterFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
 
 function App() {
 
@@ -15,16 +17,18 @@ function App() {
 
   return (
     <div className="App">
-        {/* <Greeting name='Martin'  lastName ='Gutierrez'/> */}
-        {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
-        {/* <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
-        {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
-        {/* <TaskListComponent /> */}
-        {/* <GreetingStyled name='Martin' /> */}
-        {/* <Father /> */}
-        {/* <OptionalRender /> */}
-        {/* <LoginFormik /> */}
-        {/* <RegisterFormik /> */}
+      {/* <Greeting name='Martin'  lastName ='Gutierrez'/> */}
+      {/* <GreetingFunction name='Martin' lastName='Gutierrez' /> */}
+      {/* <ComponenteA name='isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
+      {/* <ComponenteB name='Isaac' lastName='Miralles' email='isaacmiralles@gmail.com' /> */}
+      {/* <TaskListComponent /> */}
+      {/* <GreetingStyled name='Martin' /> */}
+      {/* <Father /> */}
+      {/* <OptionalRender /> */}
+      {/* <LoginFormik /> */}
+      {/* <RegisterFormik /> */}
+      <AsyncExample />
+      <ObservableExample />
     </div>
   );
 }
